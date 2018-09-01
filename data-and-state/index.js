@@ -30,7 +30,9 @@ class VideoPlayer extends React.Component {
     this.state = { video: false }
   }
 
-  playVideo = () => this.setState({ video: true })
+  playVideo = (e) => {
+    this.setState({ video: true })
+  }
 
   render() {
     if (this.state.video) {
