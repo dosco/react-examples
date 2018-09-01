@@ -1,0 +1,35 @@
+{
+  "name": "HackerCard",
+  "version": "0.0.1",
+  "description": "A card UI website for hackers",
+  "author": "Crazy Kat",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --mode=development --hot",
+    "build": "./node_modules/.bin/webpack --mode=production"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "recharts": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.4.2",
+    "styled-icons": "^2.3.2",
+    "styled-system": "^3.0.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
