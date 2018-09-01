@@ -1,8 +1,8 @@
 {
-  "name": "HackerCard",
+  "name": "VideoPlayer",
   "version": "0.0.1",
-  "description": "A card UI website for hackers",
-  "author": "Crazy Kat",
+  "description": "A youtube video player",
+  "author": "Me",
   "license": "MIT",
   "sideEffects": false,
   "scripts": {

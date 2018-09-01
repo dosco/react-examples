@@ -20,7 +20,7 @@ const Center = styled.div`
   top: 100px;
   left: 35%;
 `
-const WhitePlayCircle = styled(PlayCircle)`
+const PlayButton = styled(PlayCircle)`
   color: #f2f2f1;
 `
 
@@ -54,7 +54,7 @@ class VideoPlayer extends React.Component {
       <Card>
         <img src={this.props.image} />
         <Center>
-          <WhitePlayCircle size={250} onClick={this.playVideo} />
+          <PlayButton size={250} onClick={this.playVideo} />
         </Center>
       </Card>
     )
