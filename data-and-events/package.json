@@ -2,7 +2,7 @@
   "name": "VideoPlayer",
   "version": "0.0.1",
   "description": "A youtube video player",
-  "author": "Me",
+  "author": "Vik",
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
@@ -12,7 +12,6 @@
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "recharts": "^1.1.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.0.0",
