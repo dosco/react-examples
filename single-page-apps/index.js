@@ -5,17 +5,15 @@ import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import data from './data'
 
-const Page1Wrap = styled.div`
+const Home = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   background-color: #111;
 
-  & a { 
-    text-decoration: none; 
-  }
+  & a { text-decoration: none; }
 `
-const Page1Item = styled.div`
+const GameItem = styled.div`
   padding: 30px;
   margin: 30px;
 
@@ -35,19 +33,19 @@ const Page1Item = styled.div`
   & .name { padding: 10px; background-color: #000000a8; }
 `
 
-const Page1 = (props) => (
-  <Page1Wrap>
+const HomePage = (props) => (
+  <Home>
   {data.map(v =>
       <Link to={`/game/${v.trackId}`} key={v.trackId} >
-        <Page1Item image={v.artworkUrl512}>
+        <GameItem image={v.artworkUrl512}>
         <h1 className='name'>{v.trackName}</h1>
-        </Page1Item>
+        </GameItem>
       </Link>
   )}
-  </Page1Wrap>
+  </Home>
 )
 
-const Page2Wrap = styled.div`
+const Details = styled.div`
   display: flex;
   padding: 20px;
   height: 100%;
@@ -83,12 +81,12 @@ const Page2Wrap = styled.div`
   }
 `
 
-const Page2 = (props) => {
+const DetailsPage = (props) => {
   let id = props.match.params.id
   let g = data.find(v => v.trackId == id)
 
   return (
-  <Page2Wrap>
+  <Details>
   <img class="artwork" src={g.artworkUrl512}/>
   <div>
     <h1 class="title">{g.trackName}</h1>
@@ -97,24 +95,17 @@ const Page2 = (props) => {
     {g.screenshotUrls.map(v => <img src={v} key={v} /> )}
     </div>
   </div>
-  </Page2Wrap>
+  </Details>
   )
 }
 
-class App extends React.Component {
-  constructor(props)  {
-    super(props)
-  }
-
-  render() {
-    return (
-      <Router>
-        <>
-        <Route exact path="/" component={Page1} />
-        <Route path="/game/:id" component={Page2} />
-        </>
-    </Router>)
-  }
-}
+const App = () => (
+  <Router>
+    <>
+    <Route exact path="/" component={HomePage} />
+    <Route path="/game/:id" component={DetailsPage} />
+    </>
+  </Router>
+)
 
 ReactDOM.render(<App />, document.body);
