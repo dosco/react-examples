@@ -8,7 +8,15 @@ module.exports = {
     filename: 'index.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    proxy: {
+      '/api': {
+        target: 'https://www.reddit.com',
+        changeOrigin: true,
+        logLevel: 'debug',
+        pathRewrite: { '^/api' : '/r/Art.json' }
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({ 

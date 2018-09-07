@@ -9,7 +9,6 @@ const Home = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  background-color: #111;
 
   & a { text-decoration: none; }
 `
@@ -50,9 +49,6 @@ const Details = styled.div`
   padding: 20px;
   height: 100%;
   
-  border: 1px solid white;
-  background-color: #111;
-
   color: #fefefe;
   font-family: sans-serif;
 
@@ -108,4 +104,4 @@ const App = () => (
   </Router>
 )
 
-ReactDOM.render(<App />, document.body);
+ReactDOM.render(<App />, document.getElementById('app'));
